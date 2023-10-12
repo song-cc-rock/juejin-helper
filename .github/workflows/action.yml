@@ -27,3 +27,4 @@ jobs:
         run: |
           npm install
           npm run serve
+      - uses: gautamkrishnar/keepalive-workflow@master   
