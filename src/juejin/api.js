@@ -32,7 +32,7 @@ class Api {
    * }
    */
   checkIn() {
-    return this.http.post(`/growth_api/v1/check_in?aid=`)
+    return this.http.post(`/growth_api/v1/check_in?aid=2608&uuid=${UUID}&spider=0&msToken=${MS_TOKEN}&a_bogus=${A_BOGUS}`)
   }
 
   /**
@@ -55,7 +55,7 @@ class Api {
    * }
    */
   getLotteryConfig() {
-    return this.http.get(`/growth_api/v1/lottery_config/get?aid=`)
+    return this.http.get(`/growth_api/v1/lottery_config/get?aid=2608&uuid=${UUID}&spider=0&msToken=${MS_TOKEN}&a_bogus=${A_BOGUS}`)
   }
 
   /**
