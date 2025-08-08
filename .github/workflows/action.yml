@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Simple Keep Alive
+        run: echo "keep alive"
       - name: Setup node
         uses: actions/setup-node@v3
         with:
@@ -26,5 +28,4 @@ jobs:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
         run: |
           npm install
-          npm run serve
-      - uses: gautamkrishnar/keepalive-workflow@master   
+          npm run serve 
