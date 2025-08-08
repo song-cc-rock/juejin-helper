@@ -1,4 +1,5 @@
 const http = require('./httpInstance.js')
+const { MS_TOKEN, A_BOGUS,UUID } = require('../ENV.js')
 class Api {
   constructor() {
     this.http = http
