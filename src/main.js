@@ -31,7 +31,6 @@ ${growth.checkedIn ? `签到 +${growth.incrPoint} 矿石` : '今日已签到'}
 
 const main = async () => {
   const juejin = new Juejin()
-
   // 登录
   try {
     await juejin.login(COOKIE)
@@ -58,6 +57,7 @@ const main = async () => {
 
   // 免费抽奖
   const lotteryConfig = await juejin.getLotteryConfig()
+  console.log(lotteryConfig);
   growth.freeCount = lotteryConfig.free_count || 0
 
   // 当前矿石数
@@ -66,6 +66,8 @@ const main = async () => {
   // 当前幸运值
   const luckyResult = await juejin.getLucky()
   growth.luckyValue = luckyResult.total_value
+
+  console.log(growth);
 
   pushMessage({
     type: 'info',

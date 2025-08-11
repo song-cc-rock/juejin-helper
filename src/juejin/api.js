@@ -45,7 +45,7 @@ class Api {
    * }
    */
   getCounts() {
-    return this.http.get('/growth_api/v1/get_counts')
+    return this.http.get('/growth_api/v1/get_counts?aid=2608&uuid=${UUID}&spider=0')
   }
 
   /**
